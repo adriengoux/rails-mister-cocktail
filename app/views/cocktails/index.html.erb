@@ -1,0 +1,23 @@
+<h1>Cocktail Party!</h1>
+<p>Welcome to cocktail party</p>
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card">
+      <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> <%= cocktail.name %></h5>
+        <p class="card-text">nothing</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">nothing</li>
+        <li class="list-group-item">nothing</li>
+        <li class="list-group-item">nothing</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link"><%= link_to cocktail.name, cocktail_path(cocktail)%></a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  <% end %>
+</div>

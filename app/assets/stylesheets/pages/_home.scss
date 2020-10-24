@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.cards {
+  display: flex;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 16px
+}
+
+.card {
+  flex: 1;
+  margin-right: 10px;
+}
