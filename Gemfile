@@ -26,6 +26,10 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
+# secret files
+gem 'dotenv-rails', groups: [:development, :test]
+
+# seed
 gem 'json'
 gem 'open-uri'
 
