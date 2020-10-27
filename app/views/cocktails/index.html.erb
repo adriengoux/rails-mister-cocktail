@@ -4,14 +4,19 @@
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
+      <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= cl_image_tag("kobby-mendez-xBFTjrMIC0c-unsplash_itun8h.jpg", height: 300, width: 400, crop: :fill) %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title"> <%= cocktail.name %></h5>
-        <p class="card-text">nothing</p>
+        <p class="card-text"> future description</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">nothing</li>
-        <li class="list-group-item">nothing</li>
-        <li class="list-group-item">nothing</li>
+        <% cocktail.doses.each do |dose|  %>
+          <li class="list-group-item"><%= dose.description %> <%= dose.ingredient %></li>
+        <% end %>
       </ul>
       <div class="card-body">
         <a href="#" class="card-link"><%= link_to 'see details', cocktail_path(cocktail)%></a>
