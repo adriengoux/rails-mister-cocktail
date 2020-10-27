@@ -33,6 +33,10 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'json'
 gem 'open-uri'
 
+# photos hosting
+gem 'cloudinary', '~> 1.16.0'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
